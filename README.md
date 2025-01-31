@@ -27,28 +27,25 @@ Desktop application for user management, vaccine tracking, and inventory managem
 
 **Tech Stack**: `Java (Eclipse)`, `MVC Architecture`
 
-[🔗 View Project](#)
+[🔗 View Project](https://github.com/ShubhamMusale-UCM/VMS)
 
 ### 🎓 Student Behavior Detection
 Real-time abnormal behavior detection system using YOLOv8 and custom data training for exam monitoring.
 
 **Tech Stack**: `Python`, `OpenCV`, `YOLOv8`, `CNN`
 
-[🔗 View Project](#)
 
 ### ☕ Cafe Management System
 Desktop application for live order tracking, food preparation updates, and automated billing.
 
 **Tech Stack**: `Java (Eclipse)`, `MVC`
 
-[🔗 View Project](#)
 
 ### 🔐 Steganography Calculator
 Android calculator with hidden encryption capabilities using text steganography.
 
 **Tech Stack**: `Android`, `Java`
 
-[🔗 View Project](#)
 
 ---
 
