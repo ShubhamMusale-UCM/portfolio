@@ -87,7 +87,7 @@ const projects = [
     title: "StudyGears",
     category: "Educational Platform",
     description: "A comprehensive learning management system featuring custom courses, task management, referral system, and reward system.",
-    image: "src/publicImages/studygears.png",
+    image: {import.meta.env.BASE_URL + "src/publicImages/studygears.png" },
     tags: ["React", "Node.js", "MongoDB", "Express"],
     gradient: "from-blue-500 to-cyan-500",
     githubLink: "https://github.com/ShubhamMusale-UCM/StudyGears_ForU"
@@ -96,7 +96,7 @@ const projects = [
     title: "Vaccine Management System",
     category: "Desktop Application",
     description: "The system features user management, vaccine tracking, and a desktop application with role-based access and inventory management.",
-    image: "src/publicImages/VMS.png",
+    image: {import.meta.env.BASE_URL+"src/publicImages/VMS.png"},
     tags: ["Eclipse", "Java", "MVC Architecture"],
     gradient: "from-purple-500 to-pink-500",
     githubLink: "https://github.com/ShubhamMusale-UCM/VMS"
