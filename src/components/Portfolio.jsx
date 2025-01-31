@@ -525,7 +525,7 @@ const Portfolio = () => {
             </div>
             <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
              <img
-  src="https://drive.google.com/uc?export=view&id=1IBCpRQ2EWqRZglFeq2frCkbef6HHGsDF"
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNNHXhiplS41SM_hx2eXkE1940OtfvXriHtA&s"
   alt="Profile"
   className="w-full h-full object-cover"
   loading="eager"
