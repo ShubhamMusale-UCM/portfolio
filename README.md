@@ -20,7 +20,7 @@ A comprehensive educational platform featuring custom courses, task management, 
 
 **Tech Stack**: `React`, `Node.js`, `MongoDB`, `Express`
 
-[🔗 View Project](#)
+[🔗 View Project](https://github.com/ShubhamMusale-UCM/StudyGears_ForU)
 
 ### 💉 Vaccine Management System
 Desktop application for user management, vaccine tracking, and inventory management.
