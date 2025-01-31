@@ -87,7 +87,7 @@ const projects = [
     title: "StudyGears",
     category: "Educational Platform",
     description: "A comprehensive learning management system featuring custom courses, task management, referral system, and reward system.",
-    image: "src/publicImages/studygears.png" ,
+    image: import.meta.env.BASE_URL + "src/publicImages/studygears.png",
     tags: ["React", "Node.js", "MongoDB", "Express"],
     gradient: "from-blue-500 to-cyan-500",
     githubLink: "https://github.com/ShubhamMusale-UCM/StudyGears_ForU"
@@ -96,7 +96,7 @@ const projects = [
     title: "Vaccine Management System",
     category: "Desktop Application",
     description: "The system features user management, vaccine tracking, and a desktop application with role-based access and inventory management.",
-    image: "src/publicImages/VMS.png",
+    image: import.meta.env.BASE_URL + "src/publicImages/VMS.png",
     tags: ["Eclipse", "Java", "MVC Architecture"],
     gradient: "from-purple-500 to-pink-500",
     githubLink: "https://github.com/ShubhamMusale-UCM/VMS"
@@ -105,16 +105,15 @@ const projects = [
     title: "Student Behavior Detection",
     category: "AI/ML Application",
     description: "Real-time abnormal behavior detection system using YOLOv8 and custom data training for exam monitoring.",
-    image: "src/publicImages/abnormal studenet.png",
+    image: import.meta.env.BASE_URL + "src/publicImages/abnormal studenet.png",
     tags: ["Python", "OpenCV", "YOLOv8", "CNN"],
     gradient: "from-purple-500 to-pink-500"
   },
-
   {
     title: "Cafe Management System",
     category: "Desktop Application",
     description: "Cafe management system with live order tracking, food preparation progress updates, and automated billing.",
-    image: "src/publicImages/CAFE management.png",
+    image: import.meta.env.BASE_URL + "src/publicImages/CAFE management.png",
     tags: ["Eclipse", "Java", "MVC"],
     gradient: "from-purple-500 to-pink-500"
   },
@@ -122,7 +121,7 @@ const projects = [
     title: "Steganography Calculator",
     category: "Security Application",
     description: "Android calculator with hidden encryption capabilities, featuring text steganography and planned image/audio features.",
-    image: "src/publicImages/CAlculator.png",
+    image: import.meta.env.BASE_URL + "src/publicImages/CAlculator.png",
     tags: ["Android", "Java", "Encryption"],
     gradient: "from-green-500 to-teal-500"
   }
@@ -526,12 +525,13 @@ const Portfolio = () => {
             </div>
             <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
               <img
-                src={import.meta.env.BASE_URL + "src/publicImages/IMG_20240511_172116~2.jpg" }
-                alt="Profile"
-                className="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-              />
+  src={import.meta.env.BASE_URL + "src/publicImages/IMG_20240511_172116~2.jpg"}
+  alt="Profile"
+  className="w-full h-full object-cover"
+  loading="eager"
+  decoding="async"
+/>
+ 
             </div>
           </div>
         </motion.div>
@@ -635,13 +635,13 @@ const Portfolio = () => {
             <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-2xl rounded-full" />
           </div>
           <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
-            <img
-              src="src/publicImages/IMG_20240511_172116~2.jpg"
-              alt="Profile"
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-            />
+           <img
+  src={import.meta.env.BASE_URL + "src/publicImages/IMG_20240511_172116~2.jpg"}
+  alt="Profile"
+  className="w-full h-full object-cover"
+  loading="eager"
+  decoding="async"
+/>
           </div>
         </div>
       </motion.div>
