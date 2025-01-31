@@ -354,7 +354,7 @@ const ServiceCard = ({ service }) => (
   </motion.div>
 );
 
-// Stat Card
+// Update the StatCard component to be more mobile-friendly
 const StatCard = ({ stat }) => (
   <motion.div
     variants={fadeInUp}
@@ -363,15 +363,107 @@ const StatCard = ({ stat }) => (
     className="relative group transform hover:-translate-y-1"
   >
     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-    <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-      <div className="flex items-center gap-4 mb-3">
-        <stat.icon className="w-6 h-6 text-indigo-600" />
-        <h4 className="font-bold text-3xl text-gray-800">{stat.value}</h4>
+    <div className="p-4 md:p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4">
+        <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-indigo-600 flex-shrink-0" />
+        <div className="text-center md:text-left">
+          <h4 className="font-bold text-2xl md:text-3xl text-gray-800">{stat.value}</h4>
+          <p className="text-sm md:text-base text-gray-600 mt-1">{stat.label}</p>
+        </div>
       </div>
-      <p className="text-gray-600">{stat.label}</p>
     </div>
   </motion.div>
 );
+
+// Update the navigation to be more mobile-friendly
+const nav = `
+  <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90%] md:w-auto">
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white/90 backdrop-blur-md rounded-full px-3 md:px-6 py-2 md:py-3 shadow-lg"
+    >
+      <ul className="flex space-x-4 md:space-x-8 text-xs md:text-sm justify-center">
+`;
+
+// Update the Experience section's stats grid
+const experienceSection = `
+  {/* Stats Grid */}
+  <motion.div 
+    variants={staggerContainer} 
+    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+  >
+    {designExperience.stats.map((stat, index) => (
+      <StatCard key={index} stat={stat} />
+    ))}
+  </motion.div>
+`;
+
+// Update the hero section's responsive layout
+const heroSection = `
+  <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 lg:gap-12">
+    <div className="w-full md:w-1/2 space-y-4 md:space-y-6 order-2 md:order-1">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.3 }}
+        className="space-y-3 md:space-y-4"
+      >
+        <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-blue-50 rounded-full">
+          <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-blue-600 rounded-full mr-2" />
+          <span className="text-xs md:text-sm text-blue-600 font-medium">Available for opportunities</span>
+        </div>
+
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold flex flex-wrap justify-center md:justify-start">
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mr-2 md:mr-4">
+            Shubham
+          </span>
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Musale
+          </span>
+        </h1>
+      </motion.div>
+`;
+
+// Update the contact buttons section
+const contactButtons = `
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.7 }}
+    className="flex flex-col sm:flex-row items-center sm:items-start gap-4"
+  >
+    <button
+      onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+      className="w-full sm:w-auto group px-4 md:px-6 py-2.5 md:py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all text-sm md:text-base"
+    >
+      <span className="flex items-center justify-center gap-2">
+        View Projects
+        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+      </span>
+    </button>
+
+    <div className="flex gap-3 md:gap-4">
+      <a
+        href="https://github.com/ShubhamMusale-UCM"
+        className="p-2.5 md:p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Github className="w-4 h-4 md:w-5 md:h-5 text-gray-700" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/shubham-musale-a1425722a"
+        className="p-2.5 md:p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin className="w-4 h-4 md:w-5 md:h-5 text-gray-700" />
+      </a>
+    </div>
+  </motion.div>
+`;
 const CardTitle = ({ children, className = "" }) => (
   <motion.h3
     variants={fadeInUp}
@@ -428,10 +520,6 @@ const Portfolio = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setIsVisible(prev => ({
-            ...prev,
-            [entry.target.id]: entry.isIntersecting
-          }));
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
@@ -439,6 +527,12 @@ const Portfolio = () => {
       },
       { threshold: 0.2 }
     );
+
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
 
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => observer.observe(section));
