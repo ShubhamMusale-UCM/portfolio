@@ -534,11 +534,7 @@ const Portfolio = () => {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section) => observer.observe(section));
-
-    return () => sections.forEach((section) => observer.unobserve(section));
-  }, []);
+    
 
   return (
     <div className="min-h-screen bg-gray-50">
