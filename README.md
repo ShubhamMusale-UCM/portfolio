@@ -1,6 +1,6 @@
 # Shubham Musale - Portfolio
 
-![Shubham Musale](src/publicImages/IMG_20240511_172116~2.jpg)
+<img src="src/publicImages/IMG_20240511_172116~2.jpg" alt="Shubham Musale" width="200"/>
 
 Hi there! 👋 I'm **Shubham Musale**, a highly motivated IT professional with a passion for AI, data science, software development, and graphic design.
 
