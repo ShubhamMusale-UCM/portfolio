@@ -233,10 +233,10 @@ const ProjectCard = ({ project }) => (
   >
     <div className="relative overflow-hidden">
       <img
-        src={import.meta.env.BASE_URL + {project.image} }
-        alt={project.title}
-        className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-      />
+  src={import.meta.env.BASE_URL + project.image} // Fix the concatenation here
+  alt={project.title}
+  className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
     </div>
     <div className="p-6">
