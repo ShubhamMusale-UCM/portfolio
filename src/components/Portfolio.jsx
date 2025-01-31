@@ -87,7 +87,7 @@ const projects = [
     title: "StudyGears",
     category: "Educational Platform",
     description: "A comprehensive learning management system featuring custom courses, task management, referral system, and reward system.",
-    image: import.meta.env.BASE_URL + "src/publicImages/studygears.png",
+    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/studygears.png?raw=true",
     tags: ["React", "Node.js", "MongoDB", "Express"],
     gradient: "from-blue-500 to-cyan-500",
     githubLink: "https://github.com/ShubhamMusale-UCM/StudyGears_ForU"
@@ -96,7 +96,7 @@ const projects = [
     title: "Vaccine Management System",
     category: "Desktop Application",
     description: "The system features user management, vaccine tracking, and a desktop application with role-based access and inventory management.",
-    image: import.meta.env.BASE_URL + "src/publicImages/VMS.png",
+    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/VMS.png?raw=true",
     tags: ["Eclipse", "Java", "MVC Architecture"],
     gradient: "from-purple-500 to-pink-500",
     githubLink: "https://github.com/ShubhamMusale-UCM/VMS"
@@ -105,7 +105,7 @@ const projects = [
     title: "Student Behavior Detection",
     category: "AI/ML Application",
     description: "Real-time abnormal behavior detection system using YOLOv8 and custom data training for exam monitoring.",
-    image: import.meta.env.BASE_URL + "src/publicImages/abnormal studenet.png",
+    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/abnormal%20studenet.png?",
     tags: ["Python", "OpenCV", "YOLOv8", "CNN"],
     gradient: "from-purple-500 to-pink-500"
   },
@@ -113,7 +113,7 @@ const projects = [
     title: "Cafe Management System",
     category: "Desktop Application",
     description: "Cafe management system with live order tracking, food preparation progress updates, and automated billing.",
-    image: import.meta.env.BASE_URL + "src/publicImages/CAFE management.png",
+    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/CAFE%20management.png?raw=true",
     tags: ["Eclipse", "Java", "MVC"],
     gradient: "from-purple-500 to-pink-500"
   },
@@ -121,7 +121,7 @@ const projects = [
     title: "Steganography Calculator",
     category: "Security Application",
     description: "Android calculator with hidden encryption capabilities, featuring text steganography and planned image/audio features.",
-    image: import.meta.env.BASE_URL + "src/publicImages/CAlculator.png",
+    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/CAlculator.png?raw=true",
     tags: ["Android", "Java", "Encryption"],
     gradient: "from-green-500 to-teal-500"
   }
