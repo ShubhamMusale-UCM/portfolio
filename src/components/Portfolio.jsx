@@ -524,8 +524,8 @@ const Portfolio = () => {
               <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-2xl rounded-full" />
             </div>
             <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
-              <img
-  src={import.meta.env.BASE_URL + "src/publicImages/IMG_20240511_172116~2.jpg"}
+             <img
+  src="https://drive.google.com/uc?export=view&id=1IBCpRQ2EWqRZglFeq2frCkbef6HHGsDF"
   alt="Profile"
   className="w-full h-full object-cover"
   loading="eager"
