@@ -526,7 +526,7 @@ const Portfolio = () => {
             </div>
             <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
               <img
-                src="src/publicImages/IMG_20240511_172116~2.jpg"
+                src={import.meta.env.BASE_URL + "src/publicImages/IMG_20240511_172116~2.jpg" }
                 alt="Profile"
                 className="w-full h-full object-cover"
                 loading="eager"
