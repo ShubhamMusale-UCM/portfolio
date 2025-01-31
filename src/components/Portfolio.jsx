@@ -105,7 +105,7 @@ const projects = [
     title: "Student Behavior Detection",
     category: "AI/ML Application",
     description: "Real-time abnormal behavior detection system using YOLOv8 and custom data training for exam monitoring.",
-    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/abnormal%20studenet.png?",
+    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/abnormal%20studenet.png?raw=true",
     tags: ["Python", "OpenCV", "YOLOv8", "CNN"],
     gradient: "from-purple-500 to-pink-500"
   },
@@ -232,7 +232,7 @@ const ProjectCard = ({ project }) => (
   >
     <div className="relative overflow-hidden">
       <img
-  src={import.meta.env.BASE_URL + project.image} // Fix the concatenation here
+  src={project.image} // Fix the concatenation here
   alt={project.title}
   className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
 />
