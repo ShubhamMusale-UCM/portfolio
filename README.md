@@ -1,7 +1,7 @@
 # Shubham Musale - Portfolio
 
 <p align="center">
-  <img src="src/publicImages/IMG_20240511_172116~2.jpg" alt="Shubham Musale" width="200" style="border-radius: 50%;"/>
+  <img src="src/publicImages/IMG_20240511_172116~2.jpg" alt="Shubham Musale" width="200" style="border-radius: 50%; display: block; margin: auto;"/>
 </p>
 
 Hi there! 👋 I'm **Shubham Musale**, a highly motivated IT professional with a passion for AI, data science, software development, and graphic design.
