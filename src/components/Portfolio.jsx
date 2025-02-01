@@ -478,7 +478,7 @@ const CardContent = ({ children, className = "" }) => (
     variants={staggerContainer}
     initial="hidden"
     whileInView="visible"
-    viewport={{ once: true, margin: "-50px" }}
+    viewport={{ once: true, margin: "-100px" }}
     className={`p-6 ${className}`}
   >
     {children}
@@ -572,7 +572,7 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-<section id="about" className="min-h-[100vh] flex items-center justify-center py-0 px-4">
+<section id="about" className="min-h-screen flex items-center justify-center py-20 px-4">
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -715,11 +715,11 @@ const Portfolio = () => {
 
       {/* Desktop Profile Image */}
       <motion.div
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ delay: 0.3, duration: 0.8 }}
-  className="hidden md:block w-5/12 -ml-12 order-1 md:order-2"  // Added -ml-12 for leftward shift
->
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="hidden md:block w-5/12 order-1 md:order-2"
+      >
         <div className="relative mx-auto">
           <div className="absolute -inset-4">
             <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-2xl rounded-full" />
@@ -740,12 +740,12 @@ const Portfolio = () => {
 </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24">
+      <section id="skills" className="py-32">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="container mx-auto px-6"
         >
           <SectionTitle
@@ -782,12 +782,12 @@ const Portfolio = () => {
 
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-16 bg-gray-50">
+      <section id="certifications" className="py-16 md:py-20 bg-gray-50">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="container mx-auto px-6"
         >
           <SectionTitle
@@ -810,12 +810,12 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24">
+      <section id="projects" className="py-32">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="container mx-auto px-6"
         >
           <SectionTitle
@@ -837,12 +837,12 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 bg-gray-50">
+      <section id="experience" className="py-16 md:py-20 bg-gray-50">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="container mx-auto px-6"
         >
           <SectionTitle
