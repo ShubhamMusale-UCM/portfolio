@@ -802,40 +802,41 @@ const Portfolio = () => {
                     </a>
                   </div>
 
-                  {/* Contact Button and Dropdown */}
-                  <div className="group relative inline-block">
-                    <button
-                      onClick={() => setIsContactVisible(!isContactVisible)}
-                      className="px-6 py-2 bg-purple-100 text-purple-600 rounded-full hover:bg-purple-200 transition-colors duration-300 flex items-center gap-2"
-                    >
-                      <span>Contact Me</span>
-                      <motion.span
-                        animate={{ rotate: isContactVisible ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        ↓
-                      </motion.span>
-                    </button>
+                 {/* Contact Button and Dropdown */}
+<div className="group relative inline-block max-w-[140px] w-full">
+  <button
+    onClick={() => setIsContactVisible(!isContactVisible)}
+    className="w-full whitespace-nowrap px-4 py-2 bg-purple-100 text-purple-600 rounded-full hover:bg-purple-200 transition-colors duration-300 flex items-center justify-between gap-2"
+  >
+    <span className="flex-shrink-0">Contact Me</span>
+    <motion.span
+      animate={{ rotate: isContactVisible ? 180 : 0 }}
+      transition={{ duration: 0.3 }}
+      className="flex-shrink-0"
+    >
+      ↓
+    </motion.span>
+  </button>
 
-                    {/* Contact Info Dropdown */}
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{
-                        height: isContactVisible ? "auto" : 0,
-                        opacity: isContactVisible ? 1 : 0,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden absolute left-0 w-full z-10"
-                    >
-                      {isContactVisible && (
-                        <div className="mt-2 px-6 py-3 bg-white rounded-lg shadow-md border border-purple-100">
-                          <p className="text-gray-700 font-medium">
-                            +91 8485856618
-                          </p>
-                        </div>
-                      )}
-                    </motion.div>
-                  </div>
+  {/* Contact Info Dropdown */}
+  <motion.div
+    initial={{ height: 0, opacity: 0 }}
+    animate={{
+      height: isContactVisible ? "auto" : 0,
+      opacity: isContactVisible ? 1 : 0,
+    }}
+    transition={{ duration: 0.3 }}
+    className="overflow-hidden absolute left-0 w-full z-10"
+  >
+    {isContactVisible && (
+      <div className="mt-2 px-4 py-2 bg-white rounded-lg shadow-md border border-purple-100">
+        <p className="text-gray-700 font-medium whitespace-nowrap">
+          +91 8485856618
+        </p>
+      </div>
+    )}
+  </motion.div>
+</div>
                 </motion.div>
               </div>
               {/* Mobile Profile Image */}
