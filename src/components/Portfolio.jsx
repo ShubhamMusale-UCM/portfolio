@@ -1,5 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Monitor, Database, Code, Award, ArrowRight, ExternalLink, BookOpen, Palette, Globe, Users, Star, Github, Linkedin } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Monitor,
+  Database,
+  Code,
+  Award,
+  ArrowRight,
+  ExternalLink,
+  BookOpen,
+  Palette,
+  Globe,
+  Users,
+  Star,
+  Github,
+  Linkedin,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 // Data Objects
@@ -8,28 +22,31 @@ const designExperience = {
     { value: "2023", label: "Started Freelancing", icon: Award },
     { value: "2", label: "Countries Served", icon: Globe },
     { value: "100%", label: "Client Satisfaction", icon: Star },
-    { value: "250+", label: "Projects Completed", icon: Users }
+    { value: "250+", label: "Projects Completed", icon: Users },
   ],
   services: [
     {
       title: "Brand Identity",
-      description: "Creating cohesive visual identities that reflect brand values and resonate with target audiences.",
+      description:
+        "Creating cohesive visual identities that reflect brand values and resonate with target audiences.",
       tools: ["Ideogram", "Figma", "Sketch"],
-      icon: Palette
+      icon: Palette,
     },
     {
       title: "Marketing Materials",
-      description: "Designing engaging promotional content for digital and print campaigns.",
+      description:
+        "Designing engaging promotional content for digital and print campaigns.",
       tools: ["Ideogram", "InDesign", "Canva"],
-      icon: Monitor
+      icon: Monitor,
     },
     {
       title: "Social Media Graphics",
-      description: "Crafting eye-catching visuals optimized for various social platforms.",
+      description:
+        "Crafting eye-catching visuals optimized for various social platforms.",
       tools: ["Canva", "Capcut"],
-      icon: ExternalLink
-    }
-  ]
+      icon: ExternalLink,
+    },
+  ],
 };
 
 const skills = {
@@ -39,22 +56,22 @@ const skills = {
     { name: "Java", level: 85 },
     { name: "C++", level: 80 },
     { name: "Node.js", level: 75 },
-    { name: "R", level: 70 }
+    { name: "R", level: 70 },
   ],
   data: [
     { name: "MongoDB", level: 85 },
     { name: "Firebase", level: 80 },
     { name: "SQL", level: 85 },
     { name: "Oracle", level: 75 },
-    { name: "MariaDB", level: 70 }
+    { name: "MariaDB", level: 70 },
   ],
   aiml: [
     { name: "Scikit-learn", level: 85 },
     { name: "NLP", level: 80 },
     { name: "OpenCV", level: 75 },
     { name: "YOLOv8", level: 80 },
-    { name: "Hugging Face", level: 75 }
-  ]
+    { name: "Hugging Face", level: 75 },
+  ],
 };
 
 const certifications = [
@@ -63,22 +80,22 @@ const certifications = [
     issuer: "Udemy",
     date: "2024",
     topics: ["AI", "Python", "R", "Scikit-learn"],
-    icon: BookOpen
+    icon: BookOpen,
   },
   {
     title: "Introduction to Machine Learning",
     issuer: "NPTEL",
     date: "2024",
     topics: ["ML Fundamentals", "Algorithms"],
-    icon: Database
+    icon: Database,
   },
   {
     title: "Java Industrial Training",
     issuer: "Vishwakarma Institute",
     date: "2023",
     topics: ["MVC Architecture", "Eclipse IDE", "GUI Development"],
-    icon: Code
-  }
+    icon: Code,
+  },
 ];
 
 // Updated Projects Array
@@ -86,68 +103,78 @@ const projects = [
   {
     title: "StudyGears",
     category: "Educational Platform",
-    description: "A comprehensive learning management system featuring custom courses, task management, referral system, and reward system.",
-    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/studygears.png?raw=true",
+    description:
+      "A comprehensive learning management system featuring custom courses, task management, referral system, and reward system.",
+    image:
+      "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/studygears.png?raw=true",
     tags: ["React", "Node.js", "MongoDB", "Express"],
     gradient: "from-blue-500 to-cyan-500",
-    githubLink: "https://github.com/ShubhamMusale-UCM/StudyGears_ForU"
+    githubLink: "https://github.com/ShubhamMusale-UCM/StudyGears_ForU",
   },
   {
     title: "Vaccine Management System",
     category: "Desktop Application",
-    description: "The system features user management, vaccine tracking, and a desktop application with role-based access and inventory management.",
-    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/VMS.png?raw=true",
+    description:
+      "The system features user management, vaccine tracking, and a desktop application with role-based access and inventory management.",
+    image:
+      "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/VMS.png?raw=true",
     tags: ["Eclipse", "Java", "MVC Architecture"],
     gradient: "from-purple-500 to-pink-500",
-    githubLink: "https://github.com/ShubhamMusale-UCM/VMS"
+    githubLink: "https://github.com/ShubhamMusale-UCM/VMS",
   },
   {
     title: "Student Behavior Detection",
     category: "AI/ML Application",
-    description: "Real-time abnormal behavior detection system using YOLOv8 and custom data training for exam monitoring.",
-    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/abnormal%20studenet.png?raw=true",
+    description:
+      "Real-time abnormal behavior detection system using YOLOv8 and custom data training for exam monitoring.",
+    image:
+      "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/abnormal%20studenet.png?raw=true",
     tags: ["Python", "OpenCV", "YOLOv8", "CNN"],
-    gradient: "from-purple-500 to-pink-500"
+    gradient: "from-purple-500 to-pink-500",
   },
   {
     title: "Cafe Management System",
     category: "Desktop Application",
-    description: "Cafe management system with live order tracking, food preparation progress updates, and automated billing.",
-    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/CAFE%20management.png?raw=true",
+    description:
+      "Cafe management system with live order tracking, food preparation progress updates, and automated billing.",
+    image:
+      "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/CAFE%20management.png?raw=true",
     tags: ["Eclipse", "Java", "MVC"],
-    gradient: "from-purple-500 to-pink-500"
+    gradient: "from-purple-500 to-pink-500",
   },
   {
     title: "Steganography Calculator",
     category: "Security Application",
-    description: "Android calculator with hidden encryption capabilities, featuring text steganography and planned image/audio features.",
-    image: "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/CAlculator.png?raw=true",
+    description:
+      "Android calculator with hidden encryption capabilities, featuring text steganography and planned image/audio features.",
+    image:
+      "https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/CAlculator.png?raw=true",
     tags: ["Android", "Java", "Encryption"],
-    gradient: "from-green-500 to-teal-500"
-  }
+    gradient: "from-green-500 to-teal-500",
+  },
 ];
 
 // Helper function to get skill tags
 const getSkillTags = (skillName) => {
   const skillTags = {
-    Python: ['Data Science', 'AI/ML'],
-    JavaScript: ['Frontend', 'Node.js', 'React'],
-    Java: ['Backend', 'Android', 'WindowBuilder '],
-    'C++': ['Systems', 'Algorithms', 'Performance'],
-    'Node.js': ['Backend', 'API', 'Express'],
-    R: ['Statistics', 'Data Analysis', 'Visualization'],
-    MongoDB: ['NoSQL', 'Database', 'Backend'],
-    Firebase: ['Android', 'Real-time', 'Cloud'],
-    SQL: ['Database', 'Query', 'RDBMS'],
-    Oracle: ['Enterprise', 'Database', 'PL/SQL'],
-    MariaDB: ['Database', 'MySQL'],
-    'Scikit-learn': ['ML', 'Data Science', 'Python'],
-    NLP: ['Sentiment Analysis', 'AI', 'Processing'],
-    OpenCV: ['Computer Vision', 'Image Processing', 'AI'],
-    YOLOv8: ['Object Detection', 'Computer Vision', 'Deep Learning'],
-    'Hugging Face': ['Transformers', 'NLP', 'ML Models']
+    Python: ["Data Science", "AI/ML"],
+    JavaScript: ["Frontend", "Node.js", "React"],
+    Java: ["Backend", "Android", "WindowBuilder "],
+    "C++": ["Systems", "Algorithms", "Performance"],
+    "Node.js": ["Backend", "API", "Express"],
+    R: ["Statistics", "Data Analysis", "Visualization"],
+    MongoDB: ["NoSQL", "Database", "Backend"],
+    Firebase: ["Android", "Real-time", "Cloud"],
+    SQL: ["Database", "Query", "RDBMS"],
+    Oracle: ["Enterprise", "Database", "PL/SQL"],
+    MariaDB: ["Database", "MySQL"],
+    "Scikit-learn": ["ML", "Data Science", "Python"],
+    NLP: ["Sentiment Analysis", "AI", "Processing"],
+    OpenCV: ["Computer Vision", "Image Processing", "AI"],
+    YOLOv8: ["Object Detection", "Computer Vision", "Deep Learning"],
+    "Hugging Face": ["Transformers", "NLP", "ML Models"],
   };
-  return skillTags[skillName] || ['General'];
+  return skillTags[skillName] || ["General"];
 };
 
 // Animation variants
@@ -158,9 +185,9 @@ const fadeInUp = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const staggerContainer = {
@@ -169,9 +196,9 @@ const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-      delayChildren: 0.1
-    }
-  }
+      delayChildren: 0.1,
+    },
+  },
 };
 
 const scaleIn = {
@@ -181,9 +208,9 @@ const scaleIn = {
     scale: 1,
     transition: {
       duration: 0.5,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const slideInFromLeft = {
@@ -193,9 +220,9 @@ const slideInFromLeft = {
     x: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 // Card Components
@@ -232,10 +259,10 @@ const ProjectCard = ({ project }) => (
   >
     <div className="relative overflow-hidden">
       <img
-  src={project.image} // Fix the concatenation here
-  alt={project.title}
-  className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-/>
+        src={project.image} // Fix the concatenation here
+        alt={project.title}
+        className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
     </div>
     <div className="p-6">
@@ -263,6 +290,18 @@ const ProjectCard = ({ project }) => (
         </a>
       )}
     </div>
+  </motion.div>
+);
+
+const SectionContainer = ({ children, className = "" }) => (
+  <motion.div
+    variants={staggerContainer}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    className={`container mx-auto max-w-7xl px-4 md:px-8 ${className}`}
+  >
+    {children}
   </motion.div>
 );
 
@@ -307,7 +346,9 @@ const CertificationCard = ({ cert }) => (
       </div>
       <div>
         <h3 className="font-semibold text-lg">{cert.title}</h3>
-        <p className="text-sm text-gray-500">{cert.issuer} • {cert.date}</p>
+        <p className="text-sm text-gray-500">
+          {cert.issuer} • {cert.date}
+        </p>
       </div>
     </div>
     <div className="flex flex-wrap gap-2">
@@ -367,8 +408,12 @@ const StatCard = ({ stat }) => (
       <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4">
         <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-indigo-600 flex-shrink-0" />
         <div className="text-center md:text-left">
-          <h4 className="font-bold text-2xl md:text-3xl text-gray-800">{stat.value}</h4>
-          <p className="text-sm md:text-base text-gray-600 mt-1">{stat.label}</p>
+          <h4 className="font-bold text-2xl md:text-3xl text-gray-800">
+            {stat.value}
+          </h4>
+          <p className="text-sm md:text-base text-gray-600 mt-1">
+            {stat.label}
+          </p>
         </div>
       </div>
     </div>
@@ -401,30 +446,122 @@ const experienceSection = `
 `;
 
 // Update the hero section's responsive layout
-const heroSection = `
-  <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 lg:gap-12">
-    <div className="w-full md:w-1/2 space-y-4 md:space-y-6 order-2 md:order-1">
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.3 }}
-        className="space-y-3 md:space-y-4"
-      >
-        <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-blue-50 rounded-full">
-          <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-blue-600 rounded-full mr-2" />
-          <span className="text-xs md:text-sm text-blue-600 font-medium">Available for opportunities</span>
+const HeroSection = () => (
+  <section
+    id="about"
+    className="min-h-screen flex items-center justify-center bg-gray-50"
+  >
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="container mx-auto max-w-7xl px-4 md:px-8"
+    >
+      <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 w-full">
+        {/* Left Content */}
+        <div className="w-full md:w-1/2 space-y-6 order-2 md:order-1">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="space-y-4"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full">
+              <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
+              <span className="text-sm text-blue-600 font-medium">
+                Available for opportunities
+              </span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold md:text-left">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mr-4">
+                Shubham
+              </span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Musale
+              </span>
+            </h1>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="text-lg text-gray-600 leading-relaxed md:text-left"
+          >
+            Highly motivated IT professional with expertise in AI, data science,
+            software development, and graphic designing, skilled in Backend and
+            proficient in various tools.
+          </motion.p>
+
+          {/* Contact Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="flex flex-col sm:flex-row items-start gap-4"
+          >
+            <button
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="w-full sm:w-auto group px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all"
+            >
+              <span className="flex items-center justify-center gap-2">
+                View Projects
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </button>
+
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/ShubhamMusale-UCM"
+                className="p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="w-5 h-5 text-gray-700" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shubham-musale-a1425722a"
+                className="p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="w-5 h-5 text-gray-700" />
+              </a>
+            </div>
+          </motion.div>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold flex flex-wrap justify-center md:justify-start">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mr-2 md:mr-4">
-            Shubham
-          </span>
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Musale
-          </span>
-        </h1>
-      </motion.div>
-`;
+        {/* Right Content - Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="w-full md:w-5/12 order-1 md:order-2"
+        >
+          <div className="relative mx-auto max-w-md">
+            <div className="absolute -inset-4">
+              <div className="w-full h-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-30 blur-2xl rounded-full" />
+            </div>
+            <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
+              <img
+                src="https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/IMG_20240511_172116~2.jpg?raw=true"
+                alt="Profile"
+                className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  </section>
+);
 
 // Update the contact buttons section
 const contactButtons = `
@@ -499,20 +636,19 @@ const SectionTitle = ({ title, subtitle, color }) => (
       className="flex items-center justify-center gap-2 mb-4"
     >
       <div className={`h-1 w-12 ${color} rounded-full`} />
-      <span className={`${color.replace('bg-', 'text-')} font-semibold`}>{subtitle}</span>
+      <span className={`${color.replace("bg-", "text-")} font-semibold`}>
+        {subtitle}
+      </span>
       <div className={`h-1 w-12 ${color} rounded-full`} />
     </motion.div>
-    <motion.h2
-      variants={fadeInUp}
-      className="text-4xl font-bold text-gray-800"
-    >
+    <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-gray-800">
       {title}
     </motion.h2>
   </motion.div>
 );
 
 const Portfolio = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
   const [isVisible, setIsVisible] = useState({});
   const [isContactVisible, setIsContactVisible] = useState(false);
 
@@ -528,351 +664,387 @@ const Portfolio = () => {
       { threshold: 0.2 }
     );
 
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll("section");
     sections.forEach((section) => observer.observe(section));
 
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-    
-
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white/90 backdrop-blur-md rounded-full px-6 py-3 shadow-lg"
-        >
-          <ul className="flex space-x-8 text-sm">
-            {['About', 'Skills', 'Projects', 'Experience'].map((item) => (
-              <li key={item}>
-                <button
-                  className={`relative font-medium transition-colors duration-300
-                    ${activeSection === item.toLowerCase() ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'}`}
-                  onClick={() => {
-                    document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
-                    setActiveSection(item.toLowerCase());
-                  }}
-                >
-                  {item}
-                  {activeSection === item.toLowerCase() && (
-                    <motion.span
-                      layoutId="activeSection"
-                      className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 rounded-full"
-                    />
-                  )}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      </nav>
+      <div className="bg-gray-50">
+        {/* Navigation */}
+        <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white/90 backdrop-blur-md rounded-full px-6 py-3 shadow-lg"
+          >
+            <ul className="flex space-x-8 text-sm">
+              {["About", "Skills", "Projects", "Experience"].map((item) => (
+                <li key={item}>
+                  <button
+                    className={`relative font-medium transition-colors duration-300
+                    ${
+                      activeSection === item.toLowerCase()
+                        ? "text-blue-600"
+                        : "text-gray-600 hover:text-blue-600"
+                    }`}
+                    onClick={() => {
+                      document
+                        .getElementById(item.toLowerCase())
+                        ?.scrollIntoView({ behavior: "smooth" });
+                      setActiveSection(item.toLowerCase());
+                    }}
+                  >
+                    {item}
+                    {activeSection === item.toLowerCase() && (
+                      <motion.span
+                        layoutId="activeSection"
+                        className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 rounded-full"
+                      />
+                    )}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </nav>
 
-      {/* Hero Section */}
-<section id="about" className="min-h-screen flex items-center justify-center py-20 px-4">
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="container mx-auto"
-  >
-    <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-      <div className="w-full md:w-1/2 space-y-6 order-2 md:order-1">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-          className="space-y-4"
-        >
-          <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full">
-            <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
-            <span className="text-sm text-blue-600 font-medium">Available for opportunities</span>
-          </div>
-
-          <h1 className="text-4xl md:text-8xl font-bold flex flex-wrap justify-center md:justify-start">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mr-4 text-5xl md:text-8xl">
-              Shubham
-            </span>
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-5xl md:text-8xl">
-              Musale
-            </span>
-          </h1>
-        </motion.div>
-
-        {/* Mobile Profile Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-60 mx-auto md:hidden flex flex-col items-center justify-center text-center"
-        >
-          <div className="relative">
-            <div className="absolute -inset-4">
-              <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-2xl rounded-full" />
-            </div>
-            <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
-             <img
-  src="https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/IMG_20240511_172116~2.jpg?raw=true"
-  alt="Profile"
-  className="w-full h-full object-cover"
-  loading="eager"
-  decoding="async"
-/>
- 
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="text-lg text-gray-600 leading-relaxed"
-        >
-          Highly motivated IT professional with expertise in AI, data science, software development, and graphic designing, skilled in Backend and proficient in various tools.
-        </motion.p>
-
-        {/* New Contact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="flex flex-col space-y-3"
+        {/* Hero Section */}
+        <section
+          id="about"
+          className="min-h-screen flex items-center justify-center py-20 px-4 bg-white"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+            transition={{ duration: 0.8 }}
+            className="container mx-auto"
           >
-            <button
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="group px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all"
-            >
-              <span className="flex items-center gap-2">
-                View Projects
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </span>
-            </button>
-
-            <div className="flex gap-4">
-              <a
-                href="https://github.com/ShubhamMusale-UCM"
-                className="p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-5 h-5 text-gray-700" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/shubham-musale-a1425722a"
-                className="p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="w-5 h-5 text-gray-700" />
-              </a>
-            </div>
-            
-            {/* Contact Button */}
-            <div className="group relative inline-block">
-              <button
-                onClick={() => setIsContactVisible(!isContactVisible)}
-                className="px-6 py-2 bg-purple-100 text-purple-600 rounded-full hover:bg-purple-200 transition-colors duration-300 flex items-center gap-2"
-              >
-                <span>Contact Me</span>
-                <motion.span
-                  animate={{ rotate: isContactVisible ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+              <div className="w-full md:w-1/2 space-y-6 order-2 md:order-1">
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="space-y-4"
                 >
-                  ↓
-                </motion.span>
-              </button>
-
-              {/* Contact Info */}
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{
-                  height: isContactVisible ? "auto" : 0,
-                  opacity: isContactVisible ? 1 : 0
-                }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden"
-              >
-                {isContactVisible && (
-                  <div className="mt-2 px-6 py-3 bg-white rounded-lg shadow-md border border-purple-100">
-                    <p className="text-gray-700 font-medium">+91 8485856618</p>
+                  <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
+                    <span className="text-sm text-blue-600 font-medium">
+                      Available for opportunities
+                    </span>
                   </div>
-                )}
+
+                  <h1 className="text-4xl md:text-8xl font-bold md:flex md:flex-wrap text-center md:text-left">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent inline-block w-full md:w-auto md:mr-4 text-5xl md:text-8xl">
+                      Shubham
+                    </span>
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent inline-block w-full md:w-auto text-5xl md:text-8xl">
+                      Musale
+                    </span>
+                  </h1>
+                </motion.div>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="text-lg text-gray-600 leading-relaxed text-center md:text-left"
+                >
+                  Highly motivated IT professional with expertise in AI, data
+                  science, software development, and graphic designing, skilled
+                  in Backend and proficient in various tools.
+                </motion.p>
+
+                {/* Contact Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7 }}
+                  className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+                >
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("projects")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
+                    className="group px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all"
+                  >
+                    <span className="flex items-center gap-2">
+                      View Projects
+                      <ArrowRight
+                        size={16}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
+                    </span>
+                  </button>
+
+                  <div className="flex gap-4">
+                    <a
+                      href="https://github.com/ShubhamMusale-UCM"
+                      className="p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-5 h-5 text-gray-700" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/shubham-musale-a1425722a"
+                      className="p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Linkedin className="w-5 h-5 text-gray-700" />
+                    </a>
+                  </div>
+
+                  {/* Contact Button and Dropdown */}
+                  <div className="group relative inline-block">
+                    <button
+                      onClick={() => setIsContactVisible(!isContactVisible)}
+                      className="px-6 py-2 bg-purple-100 text-purple-600 rounded-full hover:bg-purple-200 transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <span>Contact Me</span>
+                      <motion.span
+                        animate={{ rotate: isContactVisible ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        ↓
+                      </motion.span>
+                    </button>
+
+                    {/* Contact Info Dropdown */}
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{
+                        height: isContactVisible ? "auto" : 0,
+                        opacity: isContactVisible ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden absolute left-0 w-full z-10"
+                    >
+                      {isContactVisible && (
+                        <div className="mt-2 px-6 py-3 bg-white rounded-lg shadow-md border border-purple-100">
+                          <p className="text-gray-700 font-medium">
+                            +91 8485856618
+                          </p>
+                        </div>
+                      )}
+                    </motion.div>
+                  </div>
+                </motion.div>
+              </div>
+              {/* Mobile Profile Image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="w-60 mx-auto md:hidden flex flex-col items-center justify-center text-center"
+              >
+                <div className="relative">
+                  <div className="absolute -inset-4">
+                    <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-2xl rounded-full" />
+                  </div>
+                  <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
+                    <img
+                      src="https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/IMG_20240511_172116~2.jpg?raw=true"
+                      alt="Profile"
+                      className="w-full h-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Profile Image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="hidden md:block w-5/12 order-1 md:order-2"
+              >
+                <div className="relative mx-auto">
+                  <div className="absolute -inset-4">
+                    <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-2xl rounded-full" />
+                  </div>
+                  <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
+                    <img
+                      src="https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/IMG_20240511_172116~2.jpg?raw=true"
+                      alt="Profile"
+                      className="w-full h-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
               </motion.div>
             </div>
           </motion.div>
-        </motion.div>
+        </section>
+
+        {/* Skills Section */}
+        <section
+          id="skills"
+          className="min-h-screen flex items-center justify-center bg-white"
+        >
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="container mx-auto px-4 md:px-8 w-full"
+          >
+            <SectionTitle
+              title="Technical Skills"
+              subtitle="My Expertise"
+              color="bg-blue-600"
+            />
+
+            <Card>
+              <CardContent>
+                <motion.div
+                  variants={staggerContainer}
+                  className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                >
+                  {Object.entries(skills).map(([category, skillSet], index) => (
+                    <motion.div
+                      key={category}
+                      variants={fadeInUp}
+                      className="space-y-6"
+                    >
+                      <h3 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                        {category.toUpperCase()}
+                      </h3>
+                      <div className="grid gap-4">
+                        {skillSet.map((skill, skillIndex) => (
+                          <SkillCard key={skillIndex} skill={skill} />
+                        ))}
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </section>
+
+        {/* Certifications Section */}
+        <section
+          id="certifications"
+          className="min-h-screen flex items-center justify-center bg-white"
+        >
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="container mx-auto px-4 md:px-8 py-20"
+          >
+            <SectionTitle
+              title="Certifications"
+              subtitle="Professional Development"
+              color="bg-purple-600"
+            />
+
+            <Card>
+              <CardContent>
+                <motion.div
+                  variants={staggerContainer}
+                  className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                >
+                  {certifications.map((cert, index) => (
+                    <CertificationCard key={index} cert={cert} />
+                  ))}
+                </motion.div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </section>
+
+        {/* Projects Section */}
+        <section
+          id="projects"
+          className="min-h-screen flex items-center justify-center bg-white"
+        >
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="container mx-auto px-4 md:px-8 w-full"
+          >
+            <SectionTitle
+              title="Recent Projects"
+              subtitle="Featured Work"
+              color="bg-green-600"
+            />
+
+            <Card>
+              <CardContent>
+                <motion.div
+                  variants={staggerContainer}
+                  className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                >
+                  {projects.map((project, index) => (
+                    <ProjectCard key={index} project={project} />
+                  ))}
+                </motion.div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </section>
+
+        {/* Experience Section */}
+        <section
+          id="experience"
+          // className="py-16 md:py-20 bg-gray-50">
+          className=" py-16 min-h-screen flex items-center justify-center bg-white"
+        >
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="container mx-auto px-6"
+          >
+            <SectionTitle
+              title="Design Experience"
+              subtitle="Professional Journey"
+              color="bg-indigo-600"
+            />
+
+            <Card>
+              <CardContent className="space-y-16">
+                {/* Stats Grid */}
+                <motion.div
+                  variants={staggerContainer}
+                  className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                >
+                  {designExperience.stats.map((stat, index) => (
+                    <StatCard key={index} stat={stat} />
+                  ))}
+                </motion.div>
+
+                {/* Services Grid */}
+                <motion.div
+                  variants={staggerContainer}
+                  className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                >
+                  {designExperience.services.map((service, index) => (
+                    <ServiceCard key={index} service={service} />
+                  ))}
+                </motion.div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </section>
       </div>
-
-      {/* Desktop Profile Image */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="hidden md:block w-5/12 order-1 md:order-2"
-      >
-        <div className="relative mx-auto">
-          <div className="absolute -inset-4">
-            <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-2xl rounded-full" />
-          </div>
-          <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
-           <img
-  src={"https://github.com/ShubhamMusale-UCM/portfolio/blob/main/src/publicImages/IMG_20240511_172116~2.jpg?raw=true"}
-  alt="Profile"
-  className="w-full h-full object-cover"
-  loading="eager"
-  decoding="async"
-/>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  </motion.div>
-</section>
-
-      {/* Skills Section */}
-      <section id="skills" className="py-32">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="container mx-auto px-6"
-        >
-          <SectionTitle
-            title="Technical Skills"
-            subtitle="My Expertise"
-            color="bg-blue-600"
-          />
-
-          <Card>
-            <CardContent>
-              <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {Object.entries(skills).map(([category, skillSet], index) => (
-                  <motion.div
-                    key={category}
-                    variants={fadeInUp}
-                    className="space-y-6"
-                  >
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                      {category.toUpperCase()}
-                    </h3>
-                    <div className="grid gap-4">
-                      {skillSet.map((skill, skillIndex) => (
-                        <SkillCard key={skillIndex} skill={skill} />
-
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </section>
-
-
-      {/* Certifications Section */}
-      <section id="certifications" className="py-16 md:py-20 bg-gray-50">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="container mx-auto px-6"
-        >
-          <SectionTitle
-            title="Certifications"
-            subtitle="Professional Development"
-            color="bg-purple-600"
-          />
-
-          <Card>
-            <CardContent>
-              <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {certifications.map((cert, index) => (
-                  <CertificationCard key={index} cert={cert} />
-
-                ))}
-              </motion.div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-32">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="container mx-auto px-6"
-        >
-          <SectionTitle
-            title="Recent Projects"
-            subtitle="Featured Work"
-            color="bg-green-600"
-          />
-
-          <Card>
-            <CardContent>
-              <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {projects.map((project, index) => (
-                  <ProjectCard key={index} project={project} />
-                ))}
-              </motion.div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="py-16 md:py-20 bg-gray-50">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="container mx-auto px-6"
-        >
-          <SectionTitle
-            title="Design Experience"
-            subtitle="Professional Journey"
-            color="bg-indigo-600"
-          />
-
-          <Card>
-            <CardContent className="space-y-16">
-              {/* Stats Grid */}
-              <motion.div variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {designExperience.stats.map((stat, index) => (
-                  <StatCard key={index} stat={stat} />
-
-                ))}
-              </motion.div>
-
-              {/* Services Grid */}
-              <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {designExperience.services.map((service, index) => (
-                  <ServiceCard key={index} service={service} />
-                ))}
-              </motion.div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </section>
     </div>
   );
 };
-
 export default Portfolio;
