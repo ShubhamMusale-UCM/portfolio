@@ -729,7 +729,7 @@ const Portfolio = () => {
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="space-y-4"
+                  className="space-y-4 text-center md:text-left self-start w-full flex flex-col items-center md:items-start"
                 >
                   <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
@@ -738,11 +738,11 @@ const Portfolio = () => {
                     </span>
                   </div>
 
-                  <h1 className="text-4xl md:text-8xl font-bold md:flex md:flex-wrap text-center md:text-left">
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent inline-block w-full md:w-auto md:mr-4 text-5xl md:text-8xl">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mr-4">
                       Shubham
                     </span>
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent inline-block w-full md:w-auto text-5xl md:text-8xl">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       Musale
                     </span>
                   </h1>
@@ -802,11 +802,11 @@ const Portfolio = () => {
                     </a>
                   </div>
 
-                 {/* Contact Button and Dropdown */}
-<div className="group relative inline-block max-w-[140px] w-full">
+                  {/* Contact Button and Dropdown */}
+<div className="group relative inline-block w-auto sm:w-auto">
   <button
     onClick={() => setIsContactVisible(!isContactVisible)}
-    className="w-full whitespace-nowrap px-4 py-2 bg-purple-100 text-purple-600 rounded-full hover:bg-purple-200 transition-colors duration-300 flex items-center justify-between gap-2"
+    className="px-6 py-2 bg-purple-100 text-purple-600 rounded-full hover:bg-purple-200 transition-colors duration-300 flex items-center justify-between gap-2 w-auto sm:w-auto"
   >
     <span className="flex-shrink-0">Contact Me</span>
     <motion.span
@@ -829,7 +829,7 @@ const Portfolio = () => {
     className="overflow-hidden absolute left-0 w-full z-10"
   >
     {isContactVisible && (
-      <div className="mt-2 px-4 py-2 bg-white rounded-lg shadow-md border border-purple-100">
+      <div className="mt-2 px-6 py-3 bg-white rounded-lg shadow-md border border-purple-100">
         <p className="text-gray-700 font-medium whitespace-nowrap">
           +91 8485856618
         </p>
@@ -837,6 +837,7 @@ const Portfolio = () => {
     )}
   </motion.div>
 </div>
+
                 </motion.div>
               </div>
               {/* Mobile Profile Image */}
